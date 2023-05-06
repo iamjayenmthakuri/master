@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 function App({ propA, propB }) {
   const [count, setCount] = useState(0);
@@ -21,7 +22,11 @@ function App({ propA, propB }) {
     <div>
       <p>count: {count}</p>
       <button onClick={handleClick}>Increment Count</button>
-      <p> PropA * 2:{memoizedValue}</p>
+      <p>
+        {" "}
+        PropA * 2:{propA * 2}
+        {memoizedValue}
+      </p>
     </div>
   );
 }
