@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 function App({ propA, propB }) {
   const [count, setCount] = useState(0);
@@ -12,10 +12,16 @@ function App({ propA, propB }) {
     return propA * 2;
   }, [propA]);
 
+  const handleClick = useCallback(() => {
+    console.log("useCallback: handleClick called");
+    setCount((prevCount) => prevCount + 1);
+  }, []);
+
   return (
     <div>
       <p>count: {count}</p>
       <button onClick={handleClick}>Increment Count</button>
+      <p> PropA * 2:{memoizedValue}</p>
     </div>
   );
 }
