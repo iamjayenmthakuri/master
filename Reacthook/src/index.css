@@ -1,0 +1,12 @@
+body {
+  background-color: burlywood;
+  margin-top: 18%;
+}
+div {
+  display: grid;
+  place-items: center;
+}
+button {
+  background-color: cadetblue;
+  color: aliceblue;
+}
