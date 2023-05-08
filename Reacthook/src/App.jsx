@@ -23,8 +23,7 @@ function App({ propA, propB }) {
       <p>count: {count}</p>
       <button onClick={handleClick}>Increment Count</button>
       <p>
-        {" "}
-        PropA * 2:{propA * 2}
+        PropA * 2:
         {memoizedValue}
       </p>
     </div>
